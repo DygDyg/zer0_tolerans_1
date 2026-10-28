@@ -1,0 +1,55 @@
+// Zero Sector — Character Definitions
+import { Character } from '../engine/types';
+
+export const CHARACTERS: Character[] = [
+  {
+    id: 'hardex',
+    name: 'Cpl. Hardex',
+    specialty: 'Heavy Weapons',
+    health: 150,
+    speed: 0.8,
+    startInventory: ['pulse_pistol', 'plasma_rifle'],
+    ability: 'Extra armor absorption (+25%)',
+    color: '#ff4444',
+  },
+  {
+    id: 'katana',
+    name: 'Lt. Katana',
+    specialty: 'Tactical Ops',
+    health: 100,
+    speed: 1.2,
+    startInventory: ['pulse_pistol', 'scatter_gun'],
+    ability: 'Faster movement and dodge',
+    color: '#44ff44',
+  },
+  {
+    id: 'chronos',
+    name: 'Sgt. Chronos',
+    specialty: 'Medic',
+    health: 120,
+    speed: 1.0,
+    startInventory: ['pulse_pistol', 'medkit'],
+    ability: 'Slow health regeneration',
+    color: '#4444ff',
+  },
+  {
+    id: 'raven',
+    name: 'Pvt. Raven',
+    specialty: 'Engineer',
+    health: 100,
+    speed: 1.0,
+    startInventory: ['pulse_pistol', 'ion_cannon'],
+    ability: 'Can repair turrets (future)',
+    color: '#ffff44',
+  },
+  {
+    id: 'frost',
+    name: 'Cpl. Frost',
+    specialty: 'Recon',
+    health: 90,
+    speed: 1.3,
+    startInventory: ['pulse_pistol', 'arc_blade'],
+    ability: 'Enemies detect from shorter range',
+    color: '#44ffff',
+  },
+];

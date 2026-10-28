@@ -1,0 +1,72 @@
+// Zero Sector — Weapon Definitions
+import { Weapon } from '../engine/types';
+
+export const WEAPONS: Weapon[] = [
+  {
+    id: 'pulse_pistol',
+    name: 'Pulse Pistol',
+    damage: 15,
+    fireRate: 4,
+    range: 10,
+    ammoType: 'energy',
+    ammoPerShot: 0,
+    spread: 0,
+    color: '#00ffff',
+    sound: 'pulse',
+  },
+  {
+    id: 'plasma_rifle',
+    name: 'Plasma Rifle',
+    damage: 30,
+    fireRate: 3,
+    range: 15,
+    ammoType: 'plasma',
+    ammoPerShot: 2,
+    spread: 0.02,
+    color: '#ff00ff',
+    sound: 'plasma',
+  },
+  {
+    id: 'ion_cannon',
+    name: 'Ion Cannon',
+    damage: 60,
+    fireRate: 1,
+    range: 20,
+    ammoType: 'ion',
+    ammoPerShot: 5,
+    spread: 0,
+    color: '#ffff00',
+    sound: 'ion',
+  },
+  {
+    id: 'scatter_gun',
+    name: 'Scatter Gun',
+    damage: 12,
+    fireRate: 2,
+    range: 6,
+    ammoType: 'shells',
+    ammoPerShot: 3,
+    spread: 0.15,
+    color: '#ff8800',
+    sound: 'scatter',
+  },
+  {
+    id: 'arc_blade',
+    name: 'Arc Blade',
+    damage: 45,
+    fireRate: 5,
+    range: 2,
+    ammoType: 'energy',
+    ammoPerShot: 0,
+    spread: 0,
+    color: '#00ff88',
+    sound: 'blade',
+  },
+];
+
+export const AMMO_TYPES: Record<string, { name: string; max: number }> = {
+  energy: { name: 'Energy', max: 999 },
+  plasma: { name: 'Plasma', max: 100 },
+  ion: { name: 'Ion Cells', max: 30 },
+  shells: { name: 'Shells', max: 50 },
+};
