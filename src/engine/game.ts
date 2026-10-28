@@ -108,6 +108,7 @@ export class Game {
     
     this.player = this.createDefaultPlayer();
     this.levelData = LEVELS[0];
+    this.map = this.levelData.map.map(row => [...row]);
     
     this.setupInput();
   }
@@ -427,6 +428,11 @@ export class Game {
   // === GAME LOOP ===
   
   update(timestamp: number): void {
+    if (this.lastTime === 0) {
+      this.lastTime = timestamp;
+      return;
+    }
+    
     this.deltaTime = Math.min((timestamp - this.lastTime) / 1000, 0.05);
     this.lastTime = timestamp;
     
@@ -449,7 +455,14 @@ export class Game {
       this.updateTimers();
     }
     
-    this.render();
+    // Only render when canvas is visible (playing or paused)
+    if (this.screen === 'playing' || this.screen === 'paused') {
+      try {
+        this.render();
+      } catch (e) {
+        // Silently handle render errors
+      }
+    }
   }
   
   private updatePlayer(): void {
